@@ -23,8 +23,10 @@ function entry({
       <content type="html">
         ${
           encode(
-            `<img src="${mediaThumbnailUrl}" />
-            <div>${content}</div>`
+            `<a href="${linkHref}">
+              <img src="${mediaThumbnailUrl}" />
+              <div>${content}</div>
+            </a>`
           )
         }
       </content>
