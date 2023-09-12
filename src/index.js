@@ -64,7 +64,7 @@ fastify.route({
     }).toArray();
 
     const feedHrefHtml = $('head link[rel="canonical"]').attr("href");
-    const feedTitle = titleChunks.join(" ");
+    const feedTitle = "Annunci69.it - " +titleChunks.join(" ");
     const feedSubtitle = $(`meta[name="description"]`).attr("content");
     const feedUpdated = moment().format();
 
