@@ -3,12 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@fastify/static": "^6.11.0",
+    "axios": "^1.5.0",
+    "cheerio": "^1.0.0-rc.12",
     "fastify": "^4.22.2",
-    "ffmpeg": "^0.0.4"
+    "ffmpeg": "^0.0.4",
+    "moment": "^2.29.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
