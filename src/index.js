@@ -1,8 +1,10 @@
 const path = require("path");
 const axios = require("axios");
 const cheerio = require('cheerio');
-const atom = require("./atom");
 const moment = require("moment");
+
+const atom = require("./atom");
+
 
 // const { promisify } = require('util');
 // const exec = promisify(require("child_process").exec);
@@ -60,7 +62,7 @@ fastify.route({
     const titleChunks = $(".filter_active").map((i, elem) => {
       return $(elem).text().trim().split("\n").join(" ");
     }).toArray();
-    
+
     const feedHrefHtml = $('head link[rel="canonical"]').attr("href");
     const feedTitle = titleChunks.join(" ");
     const feedSubtitle = $(`meta[name="description"]`).attr("content");

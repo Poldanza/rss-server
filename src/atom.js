@@ -1,3 +1,5 @@
+const { encode } = require("html-entities");
+
 function entry({
   title,
   authorName,
@@ -19,8 +21,12 @@ function entry({
       </author>
       <category term="${categoryTerm}" label="${categoryLabel}" />
       <content type="html">
-        <img src="${mediaThumbnailUrl}" />
-        <div>${content}</div>
+        ${
+          encode(
+            `<img src="${mediaThumbnailUrl}" />
+            <div>${content}</div>`
+          )
+        }
       </content>
       <id>${id}</id>
       <media:thumbnail url="${mediaThumbnailUrl}" />
